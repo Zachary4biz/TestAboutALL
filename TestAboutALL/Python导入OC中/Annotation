@@ -1,0 +1,15 @@
+首先添加Python.framework，在BuildPhase-->LinkBinaryWithLibrary中，地址是/System/Library/Frameworks/Python.framework
+
+然后添加Header SearchPath， BuildSetting --> Customized --> use header searchpath，路径是
+/System/Library/Frameworks/Python.framework/Headers
+
+还需要添加Frameworkd的search path
+
+---- 上面的添加Framework不行，最后还是把Framework拷贝到当前工程的.xcodeproj同级目录中,在添加，这样还会自动填写SearchPath
+
+----！！！！！！！！！！发现这个Python.framework是给OSX做的，不能用在iOS上
+Showing Recent Issues
+ld: warning:
+URGENT: building for iOS simulator, but linking against dylib (/Users/zac/WorkSpace/TestAboutALL/Python.framework/Python) built for OSX. Note: This will be an error in the future.
+
+

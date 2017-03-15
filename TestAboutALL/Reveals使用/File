@@ -1,0 +1,15 @@
+LLDB集成Reveal
+两条命令：
+一：
+expr (Class)NSClassFromString(@"IBARevealLoader") == nil ? (void *)dlopen("/Applications/Reveal.app/Contents/SharedSupport/iOS-Libraries/libReveal.dylib", 0x2) : ((void*)0)
+
+二：
+expr (void)[(NSNotificationCenter*)[NSNotificationCenter defaultCenter] postNotificationName:@"IBARevealRequestStart" object:nil];
+
+顺利完成会在控制台打印：
+INFO: Reveal Server started (Protocol Version 25).
+
+Reveal 破解方法：
+终端输入：
+defaults delete com.ittybittyapps.Reveal
+或者手动到library/preferences/找到这个plist删除

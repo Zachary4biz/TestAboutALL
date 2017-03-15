@@ -1,0 +1,50 @@
+一：
+gem sources -l #(查看当前ruby的源)
+
+gem sources --remove https://rubygems.org/ #(移除当前ruby的源)
+
+gem sources -a https://ruby.taobao.org/ #(设置当前ruby的源为我天朝的)
+
+gem sources -l #(再次查看当前ruby的源)
+
+如果输出是：
+*** CURRENT SOURCES ***
+
+https://ruby.taobao.org/
+说明正常
+（这里可能需要升级gem sudo gem update --syste
+升级成功后会提示: Latest version currently installed. Aborting.)
+
+二：
+sudo gem install  cocoapods
+
+有报错的话，用 sudo gem install -n /usr/local/bin cocoapods
+
+三：
+pod setup
+
+这个时间会比较久，可以手动到目录~/.cocoapods查看大小,
+cd进去后 用 du sh * 显示每个文件及大小, du -sh * 显示整体大小
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>安装完毕，开始使用
+四：
+1.vim 在.xcodeproj文件同级目录下，vim Podfile 创建Podfile
+2.按i 从命令模式进入插入模式，写入
+platform:ios,'10.0'
+target "TestAboutALL" do
+pod "AFNetworking","~>3.1.0"
+pod "SDWebImage","~>3.7.2"
+end
+3.按Esc 从插入模式退出到命令模式，输入 :wq 保存并退出
+（注：输入vim 然后输入命令 :e FileName 是打开文件）
+4.还是在这个目录下在控制台输入 pod install即可
+
+五：
+以后就一直用新生成的.workspace来打开项目了
+
+六：
+如何让#import有提示？或者#import出错怎么办？
+在当前这个project(TestAboutALL)的 BuildSetting -> Search Paths -> User Header Search Paths 双击后面的空白，添加一项 $(PODS_ROOT) 并选择 recursive
+
+备注：
+使用 pod search AFNetworking 可以进行搜索
