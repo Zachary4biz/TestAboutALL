@@ -59,6 +59,8 @@
 		11D0CB8F1E347758008A12C3 /* GestureTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D0CB8E1E347758008A12C3 /* GestureTestViewController.m */; };
 		11D68CF61E700DF6006FCDC3 /* AppiumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D68CF41E700DF6006FCDC3 /* AppiumViewController.m */; };
 		11D68CF71E700DF6006FCDC3 /* AppiumViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11D68CF51E700DF6006FCDC3 /* AppiumViewController.xib */; };
+		11F649A11E794A56000E6FEE /* CompilTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F6499F1E794A56000E6FEE /* CompilTestViewController.m */; };
+		11F649A21E794A56000E6FEE /* CompilTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11F649A01E794A56000E6FEE /* CompilTestViewController.xib */; };
 		11FBAA621E31BAA5005D5276 /* NSPredicateTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FBAA611E31BAA5005D5276 /* NSPredicateTestViewController.m */; };
 		2B5FD095D1E0A97018162BE2 /* libPods-TestAboutALL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5B2D805B2D10113BA9FA9F5 /* libPods-TestAboutALL.a */; };
 		B64246451DC869610006E812 /* SSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B64246441DC869610006E812 /* SSTableViewController.m */; };
@@ -187,6 +189,10 @@
 		11D68CF31E700DF6006FCDC3 /* AppiumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppiumViewController.h; sourceTree = "<group>"; };
 		11D68CF41E700DF6006FCDC3 /* AppiumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppiumViewController.m; sourceTree = "<group>"; };
 		11D68CF51E700DF6006FCDC3 /* AppiumViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppiumViewController.xib; sourceTree = "<group>"; };
+		11F6499E1E794A56000E6FEE /* CompilTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompilTestViewController.h; sourceTree = "<group>"; };
+		11F6499F1E794A56000E6FEE /* CompilTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompilTestViewController.m; sourceTree = "<group>"; };
+		11F649A01E794A56000E6FEE /* CompilTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CompilTestViewController.xib; sourceTree = "<group>"; };
+		11F649A31E794B07000E6FEE /* compileTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = compileTest.h; sourceTree = "<group>"; };
 		11FBAA601E31BAA5005D5276 /* NSPredicateTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSPredicateTestViewController.h; sourceTree = "<group>"; };
 		11FBAA611E31BAA5005D5276 /* NSPredicateTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSPredicateTestViewController.m; sourceTree = "<group>"; };
 		A9A875FAFBEB49F83EFF6913 /* Pods-TestAboutALL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestAboutALL.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestAboutALL/Pods-TestAboutALL.release.xcconfig"; sourceTree = "<group>"; };
@@ -512,6 +518,17 @@
 			path = "自动化测试Appium";
 			sourceTree = "<group>";
 		};
+		11F6499D1E7948D0000E6FEE /* 关于编译 */ = {
+			isa = PBXGroup;
+			children = (
+				11F6499E1E794A56000E6FEE /* CompilTestViewController.h */,
+				11F6499F1E794A56000E6FEE /* CompilTestViewController.m */,
+				11F649A01E794A56000E6FEE /* CompilTestViewController.xib */,
+				11F649A31E794B07000E6FEE /* compileTest.h */,
+			);
+			path = "关于编译";
+			sourceTree = "<group>";
+		};
 		11FBAA5C1E31B943005D5276 /* NSPredicate相关 */ = {
 			isa = PBXGroup;
 			children = (
@@ -635,6 +652,7 @@
 		B6EC74AB1DBF126300B90B88 /* TestAboutALL */ = {
 			isa = PBXGroup;
 			children = (
+				11F6499D1E7948D0000E6FEE /* 关于编译 */,
 				1121AA3B1E78E3C400D6DE06 /* CAShapeLayer */,
 				1121AA241E778B3900D6DE06 /* 3D变换 */,
 				1162C1431E72AB2500D25FDD /* 静态方法中调用全局变量 */,
@@ -831,6 +849,7 @@
 				114D2A8A1E63F3A900EDBCAE /* TestKeychainViewController.xib in Resources */,
 				1162C13F1E71469000D25FDD /* UploadImageViewController.xib in Resources */,
 				11D68CF71E700DF6006FCDC3 /* AppiumViewController.xib in Resources */,
+				11F649A21E794A56000E6FEE /* CompilTestViewController.xib in Resources */,
 				B6EC74B71DBF126300B90B88 /* Main.storyboard in Resources */,
 				1121AA411E78E3C400D6DE06 /* TestExtraFieldViewController.xib in Resources */,
 				11098A831E657ADE00AC2497 /* URLProtocolTestViewController.xib in Resources */,
@@ -929,6 +948,7 @@
 				B6EC74E21DBF2FF900B90B88 /* ArrayDataSource.m in Sources */,
 				11098A821E657ADE00AC2497 /* URLProtocolTestViewController.m in Sources */,
 				11098ACA1E681BF700AC2497 /* TestMultiItemsViewController.m in Sources */,
+				11F649A11E794A56000E6FEE /* CompilTestViewController.m in Sources */,
 				11FBAA621E31BAA5005D5276 /* NSPredicateTestViewController.m in Sources */,
 				11D0CB8F1E347758008A12C3 /* GestureTestViewController.m in Sources */,
 				B6EC74F01DBF4F5C00B90B88 /* objClass.m in Sources */,

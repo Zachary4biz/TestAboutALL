@@ -79,11 +79,6 @@
 
 
 #pragma mark - NSTimer形式
-- (void)stopTimer
-{
-    [self.timer2 invalidate];
-    [self.timer1 invalidate];
-}
 - (void)setUpWithTimer
 {
     //这种timer会自动加入MainRunloop的NSDefaultRunLoopMode中。
@@ -95,6 +90,11 @@
     [[NSRunLoop mainRunLoop] addTimer:self.timer2 forMode:NSDefaultRunLoopMode];
     [self.timer2 fire];
     
+}
+- (void)stopTimer
+{
+    [self.timer2 invalidate];
+    [self.timer1 invalidate];
 }
 - (void)firstTimerHandler
 {
