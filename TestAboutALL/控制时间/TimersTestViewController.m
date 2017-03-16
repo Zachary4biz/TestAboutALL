@@ -90,6 +90,11 @@
     [[NSRunLoop mainRunLoop] addTimer:self.timer2 forMode:NSDefaultRunLoopMode];
     [self.timer2 fire];
     
+    //自动开始 block
+    [NSTimer timerWithTimeInterval:0.1 repeats:YES block:^(NSTimer * _Nonnull timer) {
+        NSLog(@"设置一个值可以在block里判断一下，然后让timer停下来-- timer invalidate");
+    }];
+    
 }
 - (void)stopTimer
 {
