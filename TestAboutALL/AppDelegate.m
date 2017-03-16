@@ -37,6 +37,7 @@
 #import "ThreeDTransformViewController.h"
 #import "TestExtraFieldViewController.h"
 #import "GradientTestViewController.h"
+#import "AntiAliasingViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -95,7 +96,8 @@
 //    self.window.rootViewController = [[UploadImageViewController alloc]init];
 //    self.window.rootViewController = [[ThreeDTransformViewController alloc]init];
 //    self.window.rootViewController = [[TestExtraFieldViewController alloc]init];
-    self.window.rootViewController = [[GradientTestViewController alloc]init];
+//    self.window.rootViewController = [[GradientTestViewController alloc]init];
+    self.window.rootViewController = [[AntiAliasingViewController alloc]init];
     [self.window makeKeyAndVisible];
     
     return YES;

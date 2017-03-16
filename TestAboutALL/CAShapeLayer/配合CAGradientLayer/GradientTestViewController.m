@@ -7,25 +7,33 @@
 //
 
 #import "GradientTestViewController.h"
-
+#import "ScrollInteractViewController.h"
 @interface GradientTestViewController ()<CAAnimationDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *imgView;
-@property (nonatomic, strong) CAGradientLayer *gradTestLayer;
+
+//下拉效果
 @property (nonatomic, strong) CAGradientLayer *gradMaskLayer;
 @property (nonatomic, strong) CAShapeLayer *shapeLayer;
 @property (nonatomic, strong) UIBezierPath *path;
 @property (nonatomic, strong) UIVisualEffectView *visualView;
-
 @property (nonatomic, assign) CGPoint controlP;
+@property (nonatomic, strong) UIImageView *upPic;//下拉时，上面出现的图
 
+//学习渐变layer
+@property (nonatomic, strong) CAGradientLayer *gradTestLayer;
 - (IBAction)testBtn:(id)sender;
 - (IBAction)removeBtn:(id)sender;
-- (IBAction)beginAnimationBtn:(id)sender;
+
 
 //彩色进度条
 @property (nonatomic, strong) CAGradientLayer *progressGLayer;
 @property (weak, nonatomic) IBOutlet UIView *progressV;
 - (IBAction)progressBtn:(id)sender;
+- (IBAction)beginAnimationBtn:(id)sender;
+
+
+//打开scroll形式的VC
+- (IBAction)presentBtn:(id)sender;
 
 @end
 
@@ -89,45 +97,52 @@ static NSInteger thresHold = 80;
     CGPoint transP = [pan translationInView:pan.view];
     CGPoint locationP = [pan locationInView:pan.view];
     
-    CGFloat yOfControlP = (thresHold+transP.y) > 2*thresHold ? 2*thresHold : thresHold+transP.y;
-    _controlP = CGPointMake(locationP.x, yOfControlP);
-    
     switch (pan.state) {
         case UIGestureRecognizerStateBegan:{
+            //下部模糊效果罩住原来的网页
             self.visualView.frame = self.view.bounds;
             [self.view addSubview:self.visualView];
+            
+            //上部渐变出现的背景图
+            self.upPic = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"BGI"]];
+            self.upPic.frame = self.view.bounds;
+            self.upPic.layer.mask = self.shapeLayer;
+            [self.view addSubview:self.upPic];
+            
         }
             break;
         case UIGestureRecognizerStateChanged:
         {
             [self.shapeLayer removeFromSuperlayer];
             self.shapeLayer.path = nil;
-            NSLog(@"%@",NSStringFromCGPoint(_controlP));
-            if (_controlP.y>thresHold) {
-                NSLog(@"画曲线");
-                self.path = [UIBezierPath bezierPath];
-                [self.path moveToPoint:CGPointMake(0, thresHold)];
-                [self.path addLineToPoint:CGPointZero];
-                [self.path addLineToPoint:CGPointMake(self.view.frame.size.width, 0)];
-                [self.path addLineToPoint:CGPointMake(self.view.frame.size.width, thresHold)];
-                [self.path addCurveToPoint:CGPointMake(0, thresHold) controlPoint1:_controlP controlPoint2:_controlP];
-                [self.path closePath];
-            }else{
-                NSLog(@"画矩形");
-                self.path = [UIBezierPath bezierPath];
-                [self.path moveToPoint:CGPointZero];
-                [self.path addLineToPoint:CGPointMake(self.view.frame.size.width, 0)];
-                [self.path addLineToPoint:CGPointMake(self.view.frame.size.width, _controlP.y)];
-                [self.path addLineToPoint:CGPointMake(0, _controlP.y)];
-                [self.path closePath];
+            if (transP.y>0) {
+                if (transP.y>thresHold) {
+                    //超过80，矩形结束，开始形变
+                    self.path = [UIBezierPath bezierPath];
+                    [self.path moveToPoint:CGPointMake(0, thresHold)];
+                    [self.path addLineToPoint:CGPointZero];
+                    [self.path addLineToPoint:CGPointMake(self.view.frame.size.width, 0)];
+                    [self.path addLineToPoint:CGPointMake(self.view.frame.size.width, thresHold)];
+                    
+                    CGFloat yOfControlP = transP.y>2*thresHold?2*thresHold:transP.y;
+                    CGPoint controlP = CGPointMake(locationP.x, yOfControlP);
+                    [self.path addCurveToPoint:CGPointMake(0, thresHold) controlPoint1:controlP controlPoint2:controlP];
+                    
+                    [self.path closePath];
+                }else{
+                    //小于80，画矩形
+                    self.path = [UIBezierPath bezierPath];
+                    [self.path moveToPoint:CGPointZero];
+                    [self.path addLineToPoint:CGPointMake(self.view.frame.size.width, 0)];
+                    [self.path addLineToPoint:CGPointMake(self.view.frame.size.width, transP.y)];
+                    [self.path addLineToPoint:CGPointMake(0, transP.y)];
+                }
             }
+            
             self.shapeLayer.path = self.path.CGPath;
             [self.view.layer addSublayer:self.shapeLayer];
+            self.upPic.layer.mask = self.shapeLayer;
             
-//            self.gradMaskLayer.frame = self.view.bounds;
-//            self.gradMaskLayer.mask = self.shapeLayer;
-//            [self.view.layer addSublayer:self.gradMaskLayer];
-//            self.visualView.layer.mask = self.gradMaskLayer;
         }
             break;
         case UIGestureRecognizerStateEnded:
@@ -135,6 +150,7 @@ static NSInteger thresHold = 80;
             self.shapeLayer.path = nil;
             [self.gradMaskLayer removeFromSuperlayer];
             [self.visualView removeFromSuperview];
+            [self.upPic removeFromSuperview];
             break;
         default:
             break;
@@ -227,9 +243,14 @@ static int judge = 0;
     judge=0;
 }
 
+- (IBAction)presentBtn:(id)sender {
+    ScrollInteractViewController *s = [[ScrollInteractViewController alloc]init];
+    [self presentViewController:s animated:YES completion:nil];
+}
+
 - (IBAction)progressBtn:(id)sender {
     judge=1;
-    [NSTimer scheduledTimerWithTimeInterval:0.1 repeats:YES block:^(NSTimer * _Nonnull timer) {
+    [NSTimer scheduledTimerWithTimeInterval:0.01 repeats:YES block:^(NSTimer * _Nonnull timer) {
         if (judge) {
             [self animate];
         }else{
@@ -268,7 +289,7 @@ static int judge = 0;
 - (void)animate
 {
     
-        NSLog(@"!!");
+//        NSLog(@"!!");
         //把最后一个颜色，移动到第一个
         NSMutableArray *colorArrM = [self.progressGLayer.colors mutableCopy];
         id lastColor = colorArrM.lastObject;
