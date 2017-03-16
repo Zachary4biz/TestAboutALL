@@ -8,7 +8,7 @@
 
 #import "GradientTestViewController.h"
 
-@interface GradientTestViewController ()
+@interface GradientTestViewController ()<CAAnimationDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *imgView;
 @property (nonatomic, strong) CAGradientLayer *gradTestLayer;
 @property (nonatomic, strong) CAGradientLayer *gradMaskLayer;
@@ -17,12 +17,20 @@
 @property (nonatomic, strong) UIVisualEffectView *visualView;
 
 @property (nonatomic, assign) CGPoint controlP;
+
 - (IBAction)testBtn:(id)sender;
 - (IBAction)removeBtn:(id)sender;
+- (IBAction)beginAnimationBtn:(id)sender;
+
+//彩色进度条
+@property (nonatomic, strong) CAGradientLayer *progressGLayer;
+@property (weak, nonatomic) IBOutlet UIView *progressV;
+- (IBAction)progressBtn:(id)sender;
 
 @end
 
 @implementation GradientTestViewController
+#pragma mark - Lazy
 - (CAGradientLayer *)gradMaskLayer
 {
     if(!_gradMaskLayer){
@@ -60,6 +68,9 @@
     }
     return _visualView;
 }
+
+
+#pragma mark - LifeCycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -67,9 +78,11 @@
     self.imgView.userInteractionEnabled = YES;
     [self.imgView addGestureRecognizer:pan];
     
-//    self.view.backgroundColor = [UIColor orangeColor];
+    [self createProgressView];
 }
 
+
+#pragma mark - panGesture
 static NSInteger thresHold = 80;
 - (void)pan:(UIPanGestureRecognizer *)pan
 {
@@ -133,6 +146,7 @@ static NSInteger thresHold = 80;
 }
 
 
+#pragma mark - Btns
 - (IBAction)testBtn:(id)sender {
     
 //    self.path = [UIBezierPath bezierPathWithRect:CGRectMake(20, 20, 300, 100)];
@@ -206,5 +220,84 @@ static NSInteger thresHold = 80;
 
 - (IBAction)removeBtn:(id)sender {
     self.imgView.hidden = !self.imgView.hidden;
+}
+
+static int judge = 0;
+- (IBAction)beginAnimationBtn:(id)sender {
+    judge=0;
+}
+
+- (IBAction)progressBtn:(id)sender {
+    judge=1;
+    [NSTimer scheduledTimerWithTimeInterval:0.1 repeats:YES block:^(NSTimer * _Nonnull timer) {
+        if (judge) {
+            [self animate];
+        }else{
+            [timer invalidate];
+        }
+    }];
+    
+}
+
+#pragma mark - 封装
+- (void)createProgressView
+{
+    CAGradientLayer *GLayer = [CAGradientLayer layer];
+    GLayer.frame = self.progressV.bounds;
+    [GLayer setStartPoint:CGPointMake(0.0, 0.5)];
+    [GLayer setEndPoint:CGPointMake(1.0, 0.5)];
+    
+    //准备一个光谱颜色数组
+    NSMutableArray *colorArrM = [NSMutableArray array];
+    for (NSInteger hue = 0; hue <= 360; hue += 5) {
+        
+        UIColor *color;
+        color = [UIColor colorWithHue:1.0 * hue / 360.0
+                           saturation:1.0
+                           brightness:1.0
+                                alpha:1.0];
+        [colorArrM addObject:(id)[color CGColor]];
+    }
+    [GLayer setColors:colorArrM];
+    
+    
+    self.progressGLayer = GLayer;
+    //如果 不 设置颜色的渐变区域
+    [self.progressV.layer addSublayer:self.progressGLayer];
+}
+- (void)animate
+{
+    
+        NSLog(@"!!");
+        //把最后一个颜色，移动到第一个
+        NSMutableArray *colorArrM = [self.progressGLayer.colors mutableCopy];
+        id lastColor = colorArrM.lastObject;
+        [colorArrM removeLastObject];
+        [colorArrM insertObject:lastColor atIndex:0];
+        [self.progressGLayer setColors:colorArrM];
+    
+    
+
+    
+    
+//    CABasicAnimation *animation;
+//    [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
+//    animation = [CABasicAnimation animationWithKeyPath:@"colors"];
+//    [animation setToValue:colorArrM];
+//    [animation setDuration:0.5];
+//    [animation setRemovedOnCompletion:YES];
+//    [animation setFillMode:kCAFillModeForwards];
+//    animation.removedOnCompletion = NO;
+//    
+//    animation.delegate = self;
+//    [self.progressGLayer addAnimation:animation forKey:@"animateGradient"];
+}
+#pragma mark - CAAnimationDelegate
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
+{
+    if (flag) {
+        [self animate];
+    }
+    
 }
 @end

@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GradientTestViewController">
             <connections>
                 <outlet property="imgView" destination="M3X-wX-xJZ" id="6ax-NJ-o8c"/>
+                <outlet property="progressV" destination="paf-SF-2qc" id="fIu-gC-9NB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -38,6 +39,27 @@
                     <state key="normal" title="remove"/>
                     <connections>
                         <action selector="removeBtn:" destination="-1" eventType="touchUpInside" id="9Iz-vM-sGI"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="paf-SF-2qc">
+                    <rect key="frame" x="16" y="470" width="343" height="8"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m8H-9o-nZq">
+                    <rect key="frame" x="50" y="497" width="62" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="开始动画"/>
+                    <connections>
+                        <action selector="progressBtn:" destination="-1" eventType="touchUpInside" id="BSI-M7-xn3"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sxx-6T-t8S">
+                    <rect key="frame" x="164" y="497" width="62" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="结束动画"/>
+                    <connections>
+                        <action selector="beginAnimationBtn:" destination="-1" eventType="touchUpInside" id="HVX-6U-6RB"/>
                     </connections>
                 </button>
             </subviews>
