@@ -237,7 +237,7 @@ static int counter = 0;
                 //加载完所有网页，开始加载“退出”时的那个网页
                 judge4Reboot = 0;
                 //“退出”时的那个网页的URL在数组中的index
-                NSUInteger index;
+                NSUInteger index=0;
                 if (self.currentURL) {
                     index = [_URLArr indexOfObject:self.currentURL];
                 }

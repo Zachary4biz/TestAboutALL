@@ -1,0 +1,9 @@
+制作framework有两种，一种是提前就写好了（新建一个project，选择创建framework）
+另一种是写自己的project到一半，发现有很多复用的，并且在各类iMessage、Today扩展插件中都会用到这些重复代码，所以就封装一下，就在project内部封装。
+这里就是讲的后一种
+
+new->target->framework
+
+TestAboutALL->TARGETS->TestAboutALL->先移除一下之前写好的TestCodeOfFramework
+
+感觉并不完整，也没有测试过是不是可以用的

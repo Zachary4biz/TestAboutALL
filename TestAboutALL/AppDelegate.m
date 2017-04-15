@@ -38,6 +38,9 @@
 #import "TestExtraFieldViewController.h"
 #import "GradientTestViewController.h"
 #import "AntiAliasingViewController.h"
+#import "BtnTestViewController.h"
+#import "BlockTestViewController.h"
+#import "PhotoLibViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -97,7 +100,13 @@
 //    self.window.rootViewController = [[ThreeDTransformViewController alloc]init];
 //    self.window.rootViewController = [[TestExtraFieldViewController alloc]init];
 //    self.window.rootViewController = [[GradientTestViewController alloc]init];
-    self.window.rootViewController = [[AntiAliasingViewController alloc]init];
+//    self.window.rootViewController = [[AntiAliasingViewController alloc]init];
+    
+    
+//    self.window.rootViewController = [[BtnTestViewController alloc]init];
+//    self.window.rootViewController = [[BlockTestViewController alloc]init];
+    self.window.rootViewController = [[PhotoLibViewController alloc]init];
+    
     [self.window makeKeyAndVisible];
     
     return YES;

@@ -19,9 +19,10 @@
 @end
 
 @implementation ViewController
-
+//extern NSString* const abcStr;
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    NSLog(@"abc is %@",abcStr);
     // Do any additional setup after loading the view, typically from a nib.
     _textField = [[UITextField alloc]init];
     _textField.frame = CGRectMake(20, 80, 200, 33);
@@ -64,20 +65,7 @@
     NSLog(@"textfield did begin");
     
 }
-/*
-- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
-{
-    if (gestureRecognizer == _tapGes ) {
-        NSLog(@"tapShouldBegin");
-        _textField.text = @"tap!!";
-        
-    }else if (gestureRecognizer == _longPress){
-        NSLog(@"longPressShouldBegin");
-        _textField.text = @"longPress!!";
-    }
-    return YES;
-}
- */
+
 
 - (void)longPress:(UILongPressGestureRecognizer *)longPress
 {

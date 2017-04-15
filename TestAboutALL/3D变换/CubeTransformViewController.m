@@ -7,6 +7,7 @@
 //
 
 #import "CubeTransformViewController.h"
+#import <SpriteKit/SpriteKit.h>
 
 @interface CubeTransformViewController ()
 @property (weak, nonatomic) IBOutlet UIView *containerV;
@@ -83,16 +84,18 @@ static CGFloat initialAngle = -M_PI_4;
     
 }
 static CGPoint lastP;
+static CATransform3D baseTransform3D;
 - (void)handlePan:(UIPanGestureRecognizer *)pan
 {
-    CGPoint transP = [pan locationInView:pan.view];
+    CGPoint locationP = [pan locationInView:pan.view];
 //    CATransform3D tempTrans = _containerV.layer.sublayerTransform;
 //    
 //    tempTrans.m34 = -1/500;
     
     switch (pan.state) {
         case UIGestureRecognizerStateBegan:
-            lastP = transP;
+            lastP = locationP;
+            baseTransform3D = self.containerV.layer.sublayerTransform;
             break;
         case UIGestureRecognizerStateChanged:
         {
@@ -100,8 +103,8 @@ static CGPoint lastP;
             //transP.x就是横着滑动，横着滑动就是对应垂直转动，即沿Y轴旋转
 //            CGFloat angle1 = initialAngle + transP.x/80;
 //            CGFloat angle2 = initialAngle + transP.y/80;
-            CGFloat angle1 = ((transP.x - lastP.x)/self.V1.frame.size.width) * M_PI_2;
-            CGFloat angle2 = ((transP.y - lastP.y)/self.V1.frame.size.width) * M_PI_2;
+            CGFloat angle1 = ((locationP.x - lastP.x)/self.V1.frame.size.width) * M_PI_2;
+            CGFloat angle2 = ((locationP.y - lastP.y)/self.V1.frame.size.width) * M_PI_2;
             NSLog(@"angle1 %lf angle2 %lf",angle1,angle2);
             NSLog(@"%lf",_containerV.layer.sublayerTransform.m34);
             
@@ -112,8 +115,11 @@ static CGPoint lastP;
             //X轴旋转
             tempTrans = CATransform3DRotate(tempTrans, -angle2, 1, 0, 0);
             _containerV.layer.sublayerTransform = tempTrans;
-            
-            lastP = transP;
+            for (CALayer *l in _containerV.layer.sublayers){
+                NSLog(@"%@",NSStringFromCGPoint(l.anchorPoint));
+            }
+            NSLog(@"anchorP-Z %lf,anchorP - %@",_containerV.layer.anchorPointZ,NSStringFromCGPoint(_containerV.layer.anchorPoint));
+            lastP = locationP;
             break;
         }
         default:

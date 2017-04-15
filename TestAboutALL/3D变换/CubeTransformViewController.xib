@@ -148,8 +148,19 @@
                         <constraint firstItem="sX4-o8-Fqd" firstAttribute="centerY" secondItem="1Hu-zy-KY5" secondAttribute="centerY" id="qOB-mU-Rtc"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cmt-Fs-uKp">
-                    <rect key="frame" x="160" y="587" width="54" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ah-FO-EXG">
+                    <rect key="frame" x="50" y="587" width="46" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="U5T-aV-efk"/>
+                        <constraint firstAttribute="height" constant="30" id="ifi-28-alm"/>
+                    </constraints>
+                    <state key="normal" title="reset"/>
+                    <connections>
+                        <action selector="testBtn:" destination="-1" eventType="touchUpInside" id="Gma-2e-VqR"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cmt-Fs-uKp">
+                    <rect key="frame" x="276" y="587" width="54" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="N1v-HC-Sef"/>
                         <constraint firstAttribute="width" constant="54" id="kcR-1P-wwK"/>
@@ -157,17 +168,6 @@
                     <state key="normal" title="Dismiss"/>
                     <connections>
                         <action selector="dismissBtn:" destination="-1" eventType="touchUpInside" id="B8W-33-j0F"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ah-FO-EXG">
-                    <rect key="frame" x="164.5" y="69" width="46" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="46" id="U5T-aV-efk"/>
-                        <constraint firstAttribute="height" constant="30" id="ifi-28-alm"/>
-                    </constraints>
-                    <state key="normal" title="Button"/>
-                    <connections>
-                        <action selector="testBtn:" destination="-1" eventType="touchUpInside" id="Gma-2e-VqR"/>
                     </connections>
                 </button>
             </subviews>
