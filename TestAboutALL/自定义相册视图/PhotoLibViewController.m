@@ -7,8 +7,8 @@
 //
 
 #import "PhotoLibViewController.h"
-
-
+#import "PhotosUtil.h"
+#import "ZTRuntimeUtil.h"
 @interface PhotoLibViewController ()<PHPhotoLibraryChangeObserver>
 @property (nonatomic, strong) PHFetchResult *userAlbums;
 @property (nonatomic, strong) PHFetchResult *smartAlbums;
@@ -17,7 +17,7 @@
 @end
 
 @implementation PhotoLibViewController
-PHAssetCollection* const ZTAllAlbum;
+extern PHAssetCollection* const ZTAllAlbum;
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
@@ -68,7 +68,7 @@ PHAssetCollection* const ZTAllAlbum;
                                                                          options:nil];
     NSLog(@">>>>>用户自定义相册一共有 %ld 个",userAlbums.count);
     [userAlbums enumerateObjectsUsingBlock:^(PHAssetCollection * _Nonnull collection, NSUInteger idx, BOOL * _Nonnull stop) {
-        NSLog(@"相册名字:%@", collection.localizedTitle);
+        NSLog(@"用户相册名字:%@", collection.localizedTitle);
     }];
     
     return userAlbums;
@@ -82,9 +82,23 @@ PHAssetCollection* const ZTAllAlbum;
                                                                           options:nil];
     
     NSLog(@">>>>>智能相册一共有 %ld 个",smartAlbums.count);
+    __weak typeof(self) Wself = self;
     [smartAlbums enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx,BOOL *stop) {
         PHAssetCollection *collection = (PHAssetCollection*)obj;
-        NSLog(@"相册名字:%@", collection.localizedTitle);
+        NSLog(@"智能相册名字:%@", collection.localizedTitle);
+        [ZTRuntimeUtil fetchALLFrom:[collection class]];
+        
+        PHFetchResult *r = [PHAsset fetchKeyAssetsInAssetCollection:collection options:nil];
+        [r enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            NSLog(@"%@",obj);
+            PHAsset *as = (PHAsset*)obj;
+            [PhotosUtil dealwithAsset:as complition:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
+                UIImageView *v = [[UIImageView alloc] initWithImage:result];
+                v.frame = CGRectMake(0, 0, 300, 300);
+                [Wself.view addSubview:v];
+            }];
+            
+        }];
     }];
     
     return smartAlbums;

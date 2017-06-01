@@ -1,0 +1,7 @@
+有三类后台执行任务的场景：
+    Background Tasks：APP 在前台时启动某项任务，然后在未结束之前突然 切换到了后台，那么 APP 可以在切换回调里使用某些 API 来继续向系统请求一些时间来继续完成这个任务；完成之后通知系统，之后系统会将 APP 挂起；
+    Downloading：在后台启动从网络下载文件的任务 – 对于文件下载，iOS 有专门的机制；
+    Specific Backgournd Tasks：应用需要在后台一直执行代码；
+
+后台下载，其实使用NSURLSession就行了，系统会自动到另一个进程中处理下载，等到下载完成会回调application:handleEventsForBackgroundURLSession 方法中回到到你的应用中。
+（但是如果用户手动杀掉了app，就会自动取消任务）

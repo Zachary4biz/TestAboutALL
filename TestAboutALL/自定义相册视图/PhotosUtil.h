@@ -10,10 +10,11 @@
 #import <Photos/Photos.h>
 
 @interface PhotosUtil : NSObject
+
 //获取用户自定义相册
-- (PHFetchResult *)prepareUserAlbums;
++ (PHFetchResult *_Nonnull)prepareUserAlbums;
 //获取智能相册
-- (PHFetchResult *)prepareSmartAlbums;
++ (PHFetchResult *_Nonnull)prepareSmartAlbums;
 
 /**
  获取 某个/全部 相册中的图片 PHAsset对象
@@ -22,7 +23,7 @@
  @param ascending YES表示按时间升序，NO表示按时间降序
  @return PHAsset的数组
  */
-- (NSArray<PHAsset *> *)getAssetsInAssetCollection:(PHAssetCollection *)assetCollection ascending:(BOOL)ascending;
++ (NSArray<PHAsset *> *_Nonnull)getAssetsInAssetCollection:(PHAssetCollection *_Nonnull)assetCollection ascending:(BOOL)ascending;
 
 /**
  解析一个PHAsset对象
@@ -30,5 +31,5 @@
  @param asset 待解析的PHAsset
  @param complitionBlock 解析完成的操作
  */
-- (void)dealwithAsset:(PHAsset *)asset complition:(void (^_Nonnull)(UIImage *__nullable result, NSDictionary *__nullable info))complitionBlock;
++ (void)dealwithAsset:(PHAsset *_Nonnull)asset complition:(void (^_Nonnull)(UIImage *__nullable result, NSDictionary *__nullable info))complitionBlock;
 @end

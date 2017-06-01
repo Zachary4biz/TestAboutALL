@@ -31,6 +31,7 @@
     [self.view addSubview:bButton];
 }
 
+#pragma mark - 全面形式
 - (void)clickTestBtn
 {
     //初始化任务
@@ -86,9 +87,10 @@
     
 }
 
+#pragma mark - 简单形式（block）的队列
 - (void)clickBBtn
 {
-//    简单形式（block）的队列
+
     //初始化队列
     NSOperationQueue *aQueue = [[NSOperationQueue alloc]init];
     aQueue.name = @"简单的任务队列";

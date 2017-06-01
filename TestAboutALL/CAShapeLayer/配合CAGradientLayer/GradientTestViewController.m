@@ -177,9 +177,10 @@ static NSInteger thresHold = 80;
 
     self.gradTestLayer.frame = self.view.bounds;
     //分配颜色，这里使用clearColor配合透明度，来实现渐变隐藏、出现的效果
-    [self.gradTestLayer setColors:[NSArray arrayWithObjects:(id)[[UIColor clearColor] colorWithAlphaComponent:1.0].CGColor,
-                                                        (id)[[UIColor clearColor] colorWithAlphaComponent:0.7].CGColor,
-                                                        nil]];
+    [self.gradTestLayer setColors:[NSArray arrayWithObjects:
+                                   (id)[[UIColor clearColor] colorWithAlphaComponent:1.0].CGColor,
+                                   (id)[[UIColor clearColor] colorWithAlphaComponent:0.7].CGColor,
+                                   nil]];
     //设置渐变的区域，
     //如果只给一个值如0.5，表示第一个颜色纯色一直绘制到0.5，从0.5开始渐变到第二种
     //如果给两个值，如0.4,0.6表示在0.4~0.6之间进行渐变

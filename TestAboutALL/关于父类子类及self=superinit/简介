@@ -1,0 +1,16 @@
+1、先导：
+一般情况下
+我要使用ParentClass和SubClass两个类
+会导致ParentClass的Init调用两次，但是这两次的调用者是不同的，一次是ParentClass一次是SubClass
+在代码中的体现就是，ParentClass的Init函数中，两次被调用时的"self"是不同的
+
+2、为什么self=[super init]没有导致子类变成父类类型？
+这也是为什么 self = [super init] 没有导致子类的self变成父类的类型
+因为一个函数中的self，指代的意思是这个函数的调用者，
+比如普通的实例方法中输出self得到这个实例的地址和类型，因为这个实例方法是由这个实例调用的
+那么，父类的init被自己alloc init调用了一次，这时候self是父类自己。
+后来又被子类的[super init]调用了一次，这次调用时的self其实是子类，NSLog会得到子类的类型和子类的实例地址
+
+3、为什么要使用self=[super init]?
+两个原因，一、为了避免某些情况下父类初始化失败了，我们还没有发现，仍然使用“残疾”的子类进行操作
+        二、使用类簇的时候会针对不同情况进行初始化
