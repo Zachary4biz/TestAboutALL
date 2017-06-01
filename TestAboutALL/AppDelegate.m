@@ -44,6 +44,7 @@
 #import "BGDowloadViewController.h"
 #import "TmpViewController.h"
 #import "ParAndSubClassViewController.h"
+#import "CustomCameraViewController.h"
 
 @interface AppDelegate ()
 
@@ -109,10 +110,11 @@
     
 //    self.window.rootViewController = [[BtnTestViewController alloc]init];
 //    self.window.rootViewController = [[BlockTestViewController alloc]init];
-    self.window.rootViewController = [[PhotoLibViewController alloc]init];
+//    self.window.rootViewController = [[PhotoLibViewController alloc]init];
 //    self.window.rootViewController = [[BGDowloadViewController alloc]init];
 //    self.window.rootViewController = [[TmpViewController alloc]init];
 //    self.window.rootViewController = [[ParAndSubClassViewController alloc]init];
+    self.window.rootViewController = [[CustomCameraViewController alloc]init];
     [self.window makeKeyAndVisible];
     
     return YES;
