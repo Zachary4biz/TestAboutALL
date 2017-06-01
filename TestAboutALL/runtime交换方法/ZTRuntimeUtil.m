@@ -103,3 +103,17 @@
 //    class_addMethod(aClass,methodSel,methodIMP,types);
 //}
 @end
+
+#pragma mark - 参见Aspect库，这里不会使用block进行method_swizzling
+@implementation NSObject (ZTRuntimeUtilMethods)
+- (void)addHookToManageSelector:(SEL)selector
+               withOption:(ZTRuntimeUtilOption)option
+                withBlock:(id)block
+{
+    Method originalM = class_getInstanceMethod([self class], selector);
+    IMP originalMIMP = method_getImplementation(originalM);
+    const char *types = method_getTypeEncoding(originalM);
+//    method_exchangeImplementations(originalM, )
+}
+
+@end

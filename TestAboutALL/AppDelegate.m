@@ -41,6 +41,10 @@
 #import "BtnTestViewController.h"
 #import "BlockTestViewController.h"
 #import "PhotoLibViewController.h"
+#import "BGDowloadViewController.h"
+#import "TmpViewController.h"
+#import "ParAndSubClassViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -106,7 +110,9 @@
 //    self.window.rootViewController = [[BtnTestViewController alloc]init];
 //    self.window.rootViewController = [[BlockTestViewController alloc]init];
     self.window.rootViewController = [[PhotoLibViewController alloc]init];
-    
+//    self.window.rootViewController = [[BGDowloadViewController alloc]init];
+//    self.window.rootViewController = [[TmpViewController alloc]init];
+//    self.window.rootViewController = [[ParAndSubClassViewController alloc]init];
     [self.window makeKeyAndVisible];
     
     return YES;
@@ -138,6 +144,16 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
-
+- (void)application:(UIApplication *)application handleEventsForBackgroundURLSession:(NSString *)identifier completionHandler:(void (^)())completionHandler
+{
+    NSLog(@"进入了BackgroundURLSession的handle");
+    if ([identifier isEqualToString:@"configID"]) {
+        NSLog(@"下载完成");
+    }
+    completionHandler = ^(){
+        NSLog(@"进入completionHandler");
+        
+    };
+}
 
 @end

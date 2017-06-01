@@ -8,7 +8,7 @@
 
 #import "MultiThreadDownloader.h"
 
-@interface ZTDownloader : NSObject
+@interface SingleDownloader : NSObject
 //文件读写
 @property (nonatomic, strong) NSFileHandle *writeHandle;
 @property (nonatomic, assign) NSUInteger fileLength;
@@ -32,7 +32,7 @@
 - (void)resume;
 @end
 
-@implementation ZTDownloader
+@implementation SingleDownloader
 - (void)downloadWithRequest:(NSMutableURLRequest *)request
                       andID:(NSString *)ID
                    FilePath:(NSString *)filePath
@@ -110,8 +110,8 @@
 @property (nonatomic, strong) NSFileHandle *writeHandle1;
 @property (nonatomic, strong) NSFileHandle *writeHandle2;
 
-@property (nonatomic, strong) ZTDownloader *downloader1;
-@property (nonatomic, strong) ZTDownloader *downloader2;
+@property (nonatomic, strong) SingleDownloader *downloader1;
+@property (nonatomic, strong) SingleDownloader *downloader2;
 @property (nonatomic, copy) NSString *ID;
 
 @end
@@ -132,18 +132,18 @@
     return _session;
 }
 
-- (ZTDownloader *)downloader1
+- (SingleDownloader *)downloader1
 {
     if(!_downloader1){
-        _downloader1 = [[ZTDownloader alloc]init];
+        _downloader1 = [[SingleDownloader alloc]init];
     }
     return _downloader1;
 }
 
-- (ZTDownloader *)downloader2
+- (SingleDownloader *)downloader2
 {
     if(!_downloader2){
-        _downloader2 = [[ZTDownloader alloc]init];
+        _downloader2 = [[SingleDownloader alloc]init];
     }
     return _downloader2;
 }
@@ -209,8 +209,8 @@
     [requestM setCachePolicy:NSURLRequestReloadIgnoringLocalCacheData];
     return requestM;
 }
-#pragma mark - 配置ZTDownloader
-- (void)setUpZTDownloaderWithExpectedContentLength:(NSUInteger)expectedContentLength
+#pragma mark - 配置SingleDownloader
+- (void)setUpSingleDownloaderWithExpectedContentLength:(NSUInteger)expectedContentLength
 {
     //将请求分片
     ZTRange firstHalf,secondHalf;
@@ -248,7 +248,7 @@
     self.filePath = filePath;
     self.contentLength = expectedContentLength;
     
-    [self setUpZTDownloaderWithExpectedContentLength:self.contentLength];
+    [self setUpSingleDownloaderWithExpectedContentLength:self.contentLength];
     
 }
 

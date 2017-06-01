@@ -29,7 +29,6 @@
 		1121AA411E78E3C400D6DE06 /* TestExtraFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1121AA3E1E78E3C400D6DE06 /* TestExtraFieldViewController.xib */; };
 		1121AA451E78E3EB00D6DE06 /* GradientTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1121AA431E78E3EB00D6DE06 /* GradientTestViewController.m */; };
 		1121AA461E78E3EB00D6DE06 /* GradientTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1121AA441E78E3EB00D6DE06 /* GradientTestViewController.xib */; };
-		1121AA481E78E4BE00D6DE06 /* Assets 10-55-22-769.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1121AA471E78E4BE00D6DE06 /* Assets 10-55-22-769.xcassets */; };
 		112C5E181E36F81D0047DFB4 /* File in Resources */ = {isa = PBXBuildFile; fileRef = 112C5E171E36F81D0047DFB4 /* File */; };
 		114D2A891E63F3A900EDBCAE /* TestKeychainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 114D2A871E63F3A900EDBCAE /* TestKeychainViewController.m */; };
 		114D2A8A1E63F3A900EDBCAE /* TestKeychainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 114D2A881E63F3A900EDBCAE /* TestKeychainViewController.xib */; };
@@ -47,6 +46,12 @@
 		1162C1421E714F2300D25FDD /* PostBodyMakerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1162C1411E714F2300D25FDD /* PostBodyMakerUtil.m */; };
 		1162C1461E72AB3700D25FDD /* TestStillMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 1162C1451E72AB3700D25FDD /* TestStillMethod.m */; };
 		11675F001E602FDB00DD5E52 /* TimersTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11675EFF1E602FDB00DD5E52 /* TimersTestViewController.m */; };
+		118A9E3F1EA71B8C00026C27 /* LearnAboutLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 118A9E3E1EA71B8C00026C27 /* LearnAboutLoad.m */; };
+		118A9E431EA71BE800026C27 /* ParentClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 118A9E421EA71BE800026C27 /* ParentClass.m */; };
+		118A9E461EA71BF400026C27 /* SubClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 118A9E451EA71BF400026C27 /* SubClass.m */; };
+		118A9E4A1EA71D7900026C27 /* ParAndSubClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 118A9E481EA71D7900026C27 /* ParAndSubClassViewController.m */; };
+		118A9E4B1EA71D7900026C27 /* ParAndSubClassViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 118A9E491EA71D7900026C27 /* ParAndSubClassViewController.xib */; };
+		118A9E4D1EA75EE700026C27 /* 简介 in Resources */ = {isa = PBXBuildFile; fileRef = 118A9E4C1EA75EE700026C27 /* 简介 */; };
 		11B7A8EF1E52DAA000C8A2E0 /* HandleStringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B7A8EE1E52DAA000C8A2E0 /* HandleStringViewController.m */; };
 		11B7A9181E53F70C00C8A2E0 /* WKWebViewTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B7A9171E53F70C00C8A2E0 /* WKWebViewTestViewController.m */; };
 		11B7A91F1E543F0D00C8A2E0 /* BaiduAPITestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B7A91E1E543F0D00C8A2E0 /* BaiduAPITestViewController.m */; };
@@ -61,11 +66,23 @@
 		11B7A94D1E5C109400C8A2E0 /* TestDictionaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B7A94C1E5C109400C8A2E0 /* TestDictionaryViewController.m */; };
 		11B7A9501E5C390F00C8A2E0 /* File in Resources */ = {isa = PBXBuildFile; fileRef = 11B7A94F1E5C390F00C8A2E0 /* File */; };
 		11B7A9531E5D2F3900C8A2E0 /* WKWebViewAnotherTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B7A9521E5D2F3900C8A2E0 /* WKWebViewAnotherTestViewController.m */; };
+		11C90B131EA462F0001D9BC0 /* Assets 10-55-22-769.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11C90B121EA462F0001D9BC0 /* Assets 10-55-22-769.xcassets */; };
+		11C90B1E1EA47D81001D9BC0 /* PathUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C90B1D1EA47D81001D9BC0 /* PathUtils.m */; };
+		11C90B291EA490D7001D9BC0 /* BGDowloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C90B241EA490D7001D9BC0 /* BGDowloadViewController.m */; };
+		11C90B2A1EA490D7001D9BC0 /* BGDowloadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11C90B251EA490D7001D9BC0 /* BGDowloadViewController.xib */; };
+		11C90B2B1EA490D7001D9BC0 /* ZTDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C90B271EA490D7001D9BC0 /* ZTDownloader.m */; };
+		11C90B2C1EA490D7001D9BC0 /* 后台下载方法 in Resources */ = {isa = PBXBuildFile; fileRef = 11C90B281EA490D7001D9BC0 /* 后台下载方法 */; };
+		11C90B391EA4915E001D9BC0 /* PhotoLibViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C90B361EA4915E001D9BC0 /* PhotoLibViewController.m */; };
+		11C90B3A1EA4915E001D9BC0 /* PhotosUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C90B381EA4915E001D9BC0 /* PhotosUtil.m */; };
+		11C90B571EA4AAC4001D9BC0 /* TmpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C90B561EA4AAC4001D9BC0 /* TmpViewController.m */; };
+		11C90B5A1EA4AACF001D9BC0 /* TmpOneV.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C90B591EA4AACF001D9BC0 /* TmpOneV.m */; };
+		11C90B5D1EA4AAD9001D9BC0 /* TmpTwoV.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C90B5C1EA4AAD9001D9BC0 /* TmpTwoV.m */; };
+		11C90B5F1EA4AAE1001D9BC0 /* Tmp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11C90B5E1EA4AAE1001D9BC0 /* Tmp.xib */; };
 		11D0CB8F1E347758008A12C3 /* GestureTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D0CB8E1E347758008A12C3 /* GestureTestViewController.m */; };
 		11D68CF61E700DF6006FCDC3 /* AppiumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D68CF41E700DF6006FCDC3 /* AppiumViewController.m */; };
 		11D68CF71E700DF6006FCDC3 /* AppiumViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11D68CF51E700DF6006FCDC3 /* AppiumViewController.xib */; };
-		11DDCABF1EA0D15C001D7DFF /* PhotoLibViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11DDCABE1EA0D15C001D7DFF /* PhotoLibViewController.m */; };
-		11DDCAC21EA0DBEC001D7DFF /* PhotosUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 11DDCAC11EA0DBEC001D7DFF /* PhotosUtil.m */; };
+		11EC96131EA86135007DF170 /* NSInvocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EC96111EA86135007DF170 /* NSInvocationViewController.m */; };
+		11EC96141EA86135007DF170 /* NSInvocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11EC96121EA86135007DF170 /* NSInvocationViewController.xib */; };
 		11F649A11E794A56000E6FEE /* CompilTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F6499F1E794A56000E6FEE /* CompilTestViewController.m */; };
 		11F649A21E794A56000E6FEE /* CompilTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11F649A01E794A56000E6FEE /* CompilTestViewController.xib */; };
 		11F649AA1E7A3C23000E6FEE /* ScrollInteractViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F649A81E7A3C23000E6FEE /* ScrollInteractViewController.m */; };
@@ -149,7 +166,6 @@
 		1121AA421E78E3EB00D6DE06 /* GradientTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientTestViewController.h; sourceTree = "<group>"; };
 		1121AA431E78E3EB00D6DE06 /* GradientTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientTestViewController.m; sourceTree = "<group>"; };
 		1121AA441E78E3EB00D6DE06 /* GradientTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GradientTestViewController.xib; sourceTree = "<group>"; };
-		1121AA471E78E4BE00D6DE06 /* Assets 10-55-22-769.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Assets 10-55-22-769.xcassets"; sourceTree = "<group>"; };
 		112C5E171E36F81D0047DFB4 /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
 		114D2A861E63F3A900EDBCAE /* TestKeychainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestKeychainViewController.h; sourceTree = "<group>"; };
 		114D2A871E63F3A900EDBCAE /* TestKeychainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestKeychainViewController.m; sourceTree = "<group>"; };
@@ -167,7 +183,7 @@
 		114E34441E5ED84C0035B8DA /* MultiThreadDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiThreadDownloadManager.m; sourceTree = "<group>"; };
 		114E34471E5EE1F20035B8DA /* Enum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Enum.m; sourceTree = "<group>"; };
 		114E34491E5EEA100035B8DA /* MultiThreadDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiThreadDownloader.h; sourceTree = "<group>"; };
-		114E344A1E5EEA100035B8DA /* MultiThreadDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiThreadDownloader.m; sourceTree = "<group>"; };
+		114E344A1E5EEA100035B8DA /* MultiThreadDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MultiThreadDownloader.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		1162C13B1E71469000D25FDD /* UploadImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadImageViewController.h; sourceTree = "<group>"; };
 		1162C13C1E71469000D25FDD /* UploadImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadImageViewController.m; sourceTree = "<group>"; };
 		1162C13D1E71469000D25FDD /* UploadImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UploadImageViewController.xib; sourceTree = "<group>"; };
@@ -177,6 +193,16 @@
 		1162C1451E72AB3700D25FDD /* TestStillMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestStillMethod.m; sourceTree = "<group>"; };
 		11675EFE1E602FDB00DD5E52 /* TimersTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimersTestViewController.h; sourceTree = "<group>"; };
 		11675EFF1E602FDB00DD5E52 /* TimersTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimersTestViewController.m; sourceTree = "<group>"; };
+		118A9E3D1EA71B8C00026C27 /* LearnAboutLoad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearnAboutLoad.h; sourceTree = "<group>"; };
+		118A9E3E1EA71B8C00026C27 /* LearnAboutLoad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearnAboutLoad.m; sourceTree = "<group>"; };
+		118A9E411EA71BE800026C27 /* ParentClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParentClass.h; sourceTree = "<group>"; };
+		118A9E421EA71BE800026C27 /* ParentClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParentClass.m; sourceTree = "<group>"; };
+		118A9E441EA71BF400026C27 /* SubClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubClass.h; sourceTree = "<group>"; };
+		118A9E451EA71BF400026C27 /* SubClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubClass.m; sourceTree = "<group>"; };
+		118A9E471EA71D7900026C27 /* ParAndSubClassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParAndSubClassViewController.h; sourceTree = "<group>"; };
+		118A9E481EA71D7900026C27 /* ParAndSubClassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParAndSubClassViewController.m; sourceTree = "<group>"; };
+		118A9E491EA71D7900026C27 /* ParAndSubClassViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParAndSubClassViewController.xib; sourceTree = "<group>"; };
+		118A9E4C1EA75EE700026C27 /* 简介 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "简介"; sourceTree = "<group>"; };
 		11B7A8ED1E52DAA000C8A2E0 /* HandleStringViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandleStringViewController.h; sourceTree = "<group>"; };
 		11B7A8EE1E52DAA000C8A2E0 /* HandleStringViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandleStringViewController.m; sourceTree = "<group>"; };
 		11B7A9161E53F70C00C8A2E0 /* WKWebViewTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewTestViewController.h; sourceTree = "<group>"; };
@@ -204,15 +230,34 @@
 		11B7A94F1E5C390F00C8A2E0 /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
 		11B7A9511E5D2F3900C8A2E0 /* WKWebViewAnotherTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewAnotherTestViewController.h; sourceTree = "<group>"; };
 		11B7A9521E5D2F3900C8A2E0 /* WKWebViewAnotherTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewAnotherTestViewController.m; sourceTree = "<group>"; };
+		11C90B121EA462F0001D9BC0 /* Assets 10-55-22-769.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Assets 10-55-22-769.xcassets"; sourceTree = "<group>"; };
+		11C90B1C1EA47D81001D9BC0 /* PathUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathUtils.h; sourceTree = "<group>"; };
+		11C90B1D1EA47D81001D9BC0 /* PathUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathUtils.m; sourceTree = "<group>"; };
+		11C90B231EA490D7001D9BC0 /* BGDowloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGDowloadViewController.h; sourceTree = "<group>"; };
+		11C90B241EA490D7001D9BC0 /* BGDowloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = BGDowloadViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		11C90B251EA490D7001D9BC0 /* BGDowloadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BGDowloadViewController.xib; sourceTree = "<group>"; };
+		11C90B261EA490D7001D9BC0 /* ZTDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTDownloader.h; sourceTree = "<group>"; };
+		11C90B271EA490D7001D9BC0 /* ZTDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTDownloader.m; sourceTree = "<group>"; };
+		11C90B281EA490D7001D9BC0 /* 后台下载方法 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "后台下载方法"; sourceTree = "<group>"; };
+		11C90B351EA4915E001D9BC0 /* PhotoLibViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoLibViewController.h; sourceTree = "<group>"; };
+		11C90B361EA4915E001D9BC0 /* PhotoLibViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoLibViewController.m; sourceTree = "<group>"; };
+		11C90B371EA4915E001D9BC0 /* PhotosUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosUtil.h; sourceTree = "<group>"; };
+		11C90B381EA4915E001D9BC0 /* PhotosUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosUtil.m; sourceTree = "<group>"; };
+		11C90B551EA4AAC4001D9BC0 /* TmpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TmpViewController.h; sourceTree = "<group>"; };
+		11C90B561EA4AAC4001D9BC0 /* TmpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TmpViewController.m; sourceTree = "<group>"; };
+		11C90B581EA4AACF001D9BC0 /* TmpOneV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TmpOneV.h; sourceTree = "<group>"; };
+		11C90B591EA4AACF001D9BC0 /* TmpOneV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TmpOneV.m; sourceTree = "<group>"; };
+		11C90B5B1EA4AAD9001D9BC0 /* TmpTwoV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TmpTwoV.h; sourceTree = "<group>"; };
+		11C90B5C1EA4AAD9001D9BC0 /* TmpTwoV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TmpTwoV.m; sourceTree = "<group>"; };
+		11C90B5E1EA4AAE1001D9BC0 /* Tmp.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Tmp.xib; sourceTree = "<group>"; };
 		11D0CB8D1E347758008A12C3 /* GestureTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureTestViewController.h; sourceTree = "<group>"; };
 		11D0CB8E1E347758008A12C3 /* GestureTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureTestViewController.m; sourceTree = "<group>"; };
 		11D68CF31E700DF6006FCDC3 /* AppiumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppiumViewController.h; sourceTree = "<group>"; };
 		11D68CF41E700DF6006FCDC3 /* AppiumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppiumViewController.m; sourceTree = "<group>"; };
 		11D68CF51E700DF6006FCDC3 /* AppiumViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppiumViewController.xib; sourceTree = "<group>"; };
-		11DDCABD1EA0D15C001D7DFF /* PhotoLibViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoLibViewController.h; sourceTree = "<group>"; };
-		11DDCABE1EA0D15C001D7DFF /* PhotoLibViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoLibViewController.m; sourceTree = "<group>"; };
-		11DDCAC01EA0DBEC001D7DFF /* PhotosUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosUtil.h; sourceTree = "<group>"; };
-		11DDCAC11EA0DBEC001D7DFF /* PhotosUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosUtil.m; sourceTree = "<group>"; };
+		11EC96101EA86135007DF170 /* NSInvocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSInvocationViewController.h; sourceTree = "<group>"; };
+		11EC96111EA86135007DF170 /* NSInvocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSInvocationViewController.m; sourceTree = "<group>"; };
+		11EC96121EA86135007DF170 /* NSInvocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NSInvocationViewController.xib; sourceTree = "<group>"; };
 		11F6499E1E794A56000E6FEE /* CompilTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompilTestViewController.h; sourceTree = "<group>"; };
 		11F6499F1E794A56000E6FEE /* CompilTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompilTestViewController.m; sourceTree = "<group>"; };
 		11F649A01E794A56000E6FEE /* CompilTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CompilTestViewController.xib; sourceTree = "<group>"; };
@@ -462,6 +507,30 @@
 			path = "控制时间";
 			sourceTree = "<group>";
 		};
+		118A9E3C1EA71B7F00026C27 /* 研究load、initialize */ = {
+			isa = PBXGroup;
+			children = (
+				118A9E3D1EA71B8C00026C27 /* LearnAboutLoad.h */,
+				118A9E3E1EA71B8C00026C27 /* LearnAboutLoad.m */,
+			);
+			path = "研究load、initialize";
+			sourceTree = "<group>";
+		};
+		118A9E401EA71BDC00026C27 /* 关于父类子类及self=superinit */ = {
+			isa = PBXGroup;
+			children = (
+				118A9E411EA71BE800026C27 /* ParentClass.h */,
+				118A9E421EA71BE800026C27 /* ParentClass.m */,
+				118A9E441EA71BF400026C27 /* SubClass.h */,
+				118A9E451EA71BF400026C27 /* SubClass.m */,
+				118A9E471EA71D7900026C27 /* ParAndSubClassViewController.h */,
+				118A9E481EA71D7900026C27 /* ParAndSubClassViewController.m */,
+				118A9E491EA71D7900026C27 /* ParAndSubClassViewController.xib */,
+				118A9E4C1EA75EE700026C27 /* 简介 */,
+			);
+			path = "关于父类子类及self=superinit";
+			sourceTree = "<group>";
+		};
 		11B7A8EC1E52DA8D00C8A2E0 /* 字符串处理(未完成) */ = {
 			isa = PBXGroup;
 			children = (
@@ -561,6 +630,45 @@
 			path = "Reveals使用";
 			sourceTree = "<group>";
 		};
+		11C90B221EA490D7001D9BC0 /* 后台下载 */ = {
+			isa = PBXGroup;
+			children = (
+				11C90B231EA490D7001D9BC0 /* BGDowloadViewController.h */,
+				11C90B241EA490D7001D9BC0 /* BGDowloadViewController.m */,
+				11C90B251EA490D7001D9BC0 /* BGDowloadViewController.xib */,
+				11C90B261EA490D7001D9BC0 /* ZTDownloader.h */,
+				11C90B271EA490D7001D9BC0 /* ZTDownloader.m */,
+				11C90B281EA490D7001D9BC0 /* 后台下载方法 */,
+			);
+			path = "后台下载";
+			sourceTree = "<group>";
+		};
+		11C90B341EA4915E001D9BC0 /* 自定义相册视图(里面的VC没做） */ = {
+			isa = PBXGroup;
+			children = (
+				11C90B351EA4915E001D9BC0 /* PhotoLibViewController.h */,
+				11C90B361EA4915E001D9BC0 /* PhotoLibViewController.m */,
+				11C90B371EA4915E001D9BC0 /* PhotosUtil.h */,
+				11C90B381EA4915E001D9BC0 /* PhotosUtil.m */,
+			);
+			name = "自定义相册视图(里面的VC没做）";
+			path = "自定义相册视图";
+			sourceTree = "<group>";
+		};
+		11C90B541EA4AAB6001D9BC0 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				11C90B551EA4AAC4001D9BC0 /* TmpViewController.h */,
+				11C90B561EA4AAC4001D9BC0 /* TmpViewController.m */,
+				11C90B581EA4AACF001D9BC0 /* TmpOneV.h */,
+				11C90B591EA4AACF001D9BC0 /* TmpOneV.m */,
+				11C90B5B1EA4AAD9001D9BC0 /* TmpTwoV.h */,
+				11C90B5C1EA4AAD9001D9BC0 /* TmpTwoV.m */,
+				11C90B5E1EA4AAE1001D9BC0 /* Tmp.xib */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
 		11D0CB8C1E347742008A12C3 /* UIGestureRecognizer状态 */ = {
 			isa = PBXGroup;
 			children = (
@@ -580,15 +688,14 @@
 			path = "自动化测试Appium";
 			sourceTree = "<group>";
 		};
-		11DDCABC1EA0D15C001D7DFF /* 自定义相册视图 */ = {
+		11EC960F1EA860D3007DF170 /* NSInvocation的使用 */ = {
 			isa = PBXGroup;
 			children = (
-				11DDCABD1EA0D15C001D7DFF /* PhotoLibViewController.h */,
-				11DDCABE1EA0D15C001D7DFF /* PhotoLibViewController.m */,
-				11DDCAC01EA0DBEC001D7DFF /* PhotosUtil.h */,
-				11DDCAC11EA0DBEC001D7DFF /* PhotosUtil.m */,
+				11EC96101EA86135007DF170 /* NSInvocationViewController.h */,
+				11EC96111EA86135007DF170 /* NSInvocationViewController.m */,
+				11EC96121EA86135007DF170 /* NSInvocationViewController.xib */,
 			);
-			path = "自定义相册视图";
+			path = "NSInvocation的使用";
 			sourceTree = "<group>";
 		};
 		11F6499D1E7948D0000E6FEE /* 关于编译 */ = {
@@ -765,9 +872,13 @@
 		B6EC74AB1DBF126300B90B88 /* TestAboutALL */ = {
 			isa = PBXGroup;
 			children = (
+				118A9E401EA71BDC00026C27 /* 关于父类子类及self=superinit */,
+				118A9E3C1EA71B7F00026C27 /* 研究load、initialize */,
+				11C90B541EA4AAB6001D9BC0 /* Test */,
+				11C90B341EA4915E001D9BC0 /* 自定义相册视图(里面的VC没做） */,
+				11C90B221EA490D7001D9BC0 /* 后台下载 */,
 				111BDA541E9DDF4500FAD817 /* block相关strong和weak修饰self */,
 				111BD9E11E9CCE6500FAD817 /* 图片加文字的按钮 */,
-				11DDCABC1EA0D15C001D7DFF /* 自定义相册视图 */,
 				11F72E2D1E9B63AF0028151E /* 制作framework */,
 				11F649AC1E7A6088000E6FEE /* 解决旋转图片边缘有锯齿 */,
 				11F6499D1E7948D0000E6FEE /* 关于编译 */,
@@ -797,6 +908,7 @@
 				B67C16D51E2DB9050005E718 /* Copy与MutalbeCopy */,
 				B6E780DB1E16443300C37950 /* 测试runloop期间可以响应UI */,
 				B6E780D11E16099D00C37950 /* NSOperationQueue多线程 */,
+				11EC960F1EA860D3007DF170 /* NSInvocation的使用 */,
 				B6724B3F1DEEC9BC00EC6DE4 /* Runtime */,
 				B6EA7DEE1DD0156000EBDF72 /* TableView生命周期 */,
 				B6EA7C1F1DCB3AB200EBDF72 /* View的生命周期 */,
@@ -807,11 +919,13 @@
 				B6EC74B01DBF126300B90B88 /* AppDelegate.m */,
 				B6EC74B21DBF126300B90B88 /* ViewController.h */,
 				B6EC74B31DBF126300B90B88 /* ViewController.m */,
+				11C90B121EA462F0001D9BC0 /* Assets 10-55-22-769.xcassets */,
 				B6EC74B51DBF126300B90B88 /* Main.storyboard */,
 				B6EC74BA1DBF126300B90B88 /* LaunchScreen.storyboard */,
 				B6EC74BD1DBF126300B90B88 /* Info.plist */,
-				1121AA471E78E4BE00D6DE06 /* Assets 10-55-22-769.xcassets */,
 				B6EC74AC1DBF126300B90B88 /* Supporting Files */,
+				11C90B1C1EA47D81001D9BC0 /* PathUtils.h */,
+				11C90B1D1EA47D81001D9BC0 /* PathUtils.m */,
 			);
 			path = TestAboutALL;
 			sourceTree = "<group>";
@@ -928,7 +1042,7 @@
 		B6EC74A11DBF126300B90B88 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "周桐";
 				TargetAttributes = {
 					B6EC74A81DBF126300B90B88 = {
@@ -961,15 +1075,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				118A9E4B1EA71D7900026C27 /* ParAndSubClassViewController.xib in Resources */,
+				11C90B2C1EA490D7001D9BC0 /* 后台下载方法 in Resources */,
 				B6EC74BC1DBF126300B90B88 /* LaunchScreen.storyboard in Resources */,
 				11B7A9501E5C390F00C8A2E0 /* File in Resources */,
+				118A9E4D1EA75EE700026C27 /* 简介 in Resources */,
 				114E34421E5EC5F40035B8DA /* MultiThread.xib in Resources */,
 				114D2A8A1E63F3A900EDBCAE /* TestKeychainViewController.xib in Resources */,
+				11C90B2A1EA490D7001D9BC0 /* BGDowloadViewController.xib in Resources */,
 				1162C13F1E71469000D25FDD /* UploadImageViewController.xib in Resources */,
 				11D68CF71E700DF6006FCDC3 /* AppiumViewController.xib in Resources */,
 				11F649AB1E7A3C23000E6FEE /* ScrollInteractViewController.xib in Resources */,
+				11C90B131EA462F0001D9BC0 /* Assets 10-55-22-769.xcassets in Resources */,
 				11F649A21E794A56000E6FEE /* CompilTestViewController.xib in Resources */,
 				B6EC74B71DBF126300B90B88 /* Main.storyboard in Resources */,
+				11C90B5F1EA4AAE1001D9BC0 /* Tmp.xib in Resources */,
 				1121AA411E78E3C400D6DE06 /* TestExtraFieldViewController.xib in Resources */,
 				111BDA5E1E9DF4FA00FAD817 /* ShouldDeallocViewController.xib in Resources */,
 				11098A831E657ADE00AC2497 /* URLProtocolTestViewController.xib in Resources */,
@@ -979,12 +1099,12 @@
 				111BDA591E9DE2AE00FAD817 /* BlockTestViewController.xib in Resources */,
 				11098ACC1E681C2600AC2497 /* TestMultiVC.xib in Resources */,
 				11F72E511E9B63FC0028151E /* Framework制作流程 in Resources */,
-				1121AA481E78E4BE00D6DE06 /* Assets 10-55-22-769.xcassets in Resources */,
 				1121AA291E778BD700D6DE06 /* ThreeDTransformViewController.xib in Resources */,
 				11098AC61E67C10D00AC2497 /* UIKitTestViewController.xib in Resources */,
 				11F649B11E7A60C5000E6FEE /* AntiAliasingViewController.xib in Resources */,
 				1121AA461E78E3EB00D6DE06 /* GradientTestViewController.xib in Resources */,
 				114E342C1E5E773C0035B8DA /* Annotation in Resources */,
+				11EC96141EA86135007DF170 /* NSInvocationViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1048,7 +1168,11 @@
 				11B7A94D1E5C109400C8A2E0 /* TestDictionaryViewController.m in Sources */,
 				11B7A93E1E5AD74300C8A2E0 /* TestParamViewController.m in Sources */,
 				1121AA451E78E3EB00D6DE06 /* GradientTestViewController.m in Sources */,
+				11C90B571EA4AAC4001D9BC0 /* TmpViewController.m in Sources */,
+				118A9E431EA71BE800026C27 /* ParentClass.m in Sources */,
 				B6EC74B41DBF126300B90B88 /* ViewController.m in Sources */,
+				11C90B5D1EA4AAD9001D9BC0 /* TmpTwoV.m in Sources */,
+				118A9E3F1EA71B8C00026C27 /* LearnAboutLoad.m in Sources */,
 				B6EC74DE1DBF2FBE00B90B88 /* TableViewController.m in Sources */,
 				B6EC74ED1DBF4ED200B90B88 /* KVOTest.m in Sources */,
 				B64246451DC869610006E812 /* SSTableViewController.m in Sources */,
@@ -1056,13 +1180,14 @@
 				114E343E1E5E89B50035B8DA /* MultiThreadDownloadViewController.m in Sources */,
 				1162C1421E714F2300D25FDD /* PostBodyMakerUtil.m in Sources */,
 				B67C16D81E2DB9260005E718 /* CopyAndMuttableCopyViewController.m in Sources */,
+				11C90B291EA490D7001D9BC0 /* BGDowloadViewController.m in Sources */,
 				11098AC41E67BE9700AC2497 /* UIKitTestViewController.m in Sources */,
 				11098A7B1E65717C00AC2497 /* URLProtocolTest.m in Sources */,
 				11098A861E65844E00AC2497 /* NSURLProtocol+WebKitSupport.m in Sources */,
+				11EC96131EA86135007DF170 /* NSInvocationViewController.m in Sources */,
 				11B7A93B1E5AD6B800C8A2E0 /* TestParam.m in Sources */,
 				11B7A9531E5D2F3900C8A2E0 /* WKWebViewAnotherTestViewController.m in Sources */,
 				1121AA401E78E3C400D6DE06 /* TestExtraFieldViewController.m in Sources */,
-				11DDCABF1EA0D15C001D7DFF /* PhotoLibViewController.m in Sources */,
 				11B7A9491E5BF67A00C8A2E0 /* CancellerGCD.m in Sources */,
 				114E344B1E5EEA100035B8DA /* MultiThreadDownloader.m in Sources */,
 				11B7A92D1E56AE9000C8A2E0 /* TestNSPredicate.m in Sources */,
@@ -1075,10 +1200,12 @@
 				B6EC74E21DBF2FF900B90B88 /* ArrayDataSource.m in Sources */,
 				11098A821E657ADE00AC2497 /* URLProtocolTestViewController.m in Sources */,
 				11098ACA1E681BF700AC2497 /* TestMultiItemsViewController.m in Sources */,
+				118A9E4A1EA71D7900026C27 /* ParAndSubClassViewController.m in Sources */,
 				11F649A11E794A56000E6FEE /* CompilTestViewController.m in Sources */,
 				11FBAA621E31BAA5005D5276 /* NSPredicateTestViewController.m in Sources */,
+				11C90B5A1EA4AACF001D9BC0 /* TmpOneV.m in Sources */,
+				11C90B1E1EA47D81001D9BC0 /* PathUtils.m in Sources */,
 				11F649B01E7A60C5000E6FEE /* AntiAliasingViewController.m in Sources */,
-				11DDCAC21EA0DBEC001D7DFF /* PhotosUtil.m in Sources */,
 				11D0CB8F1E347758008A12C3 /* GestureTestViewController.m in Sources */,
 				B6EC74F01DBF4F5C00B90B88 /* objClass.m in Sources */,
 				114E342A1E5E772B0035B8DA /* PythonTestViewController.m in Sources */,
@@ -1089,18 +1216,22 @@
 				B6EC74E81DBF3A0500B90B88 /* Model.m in Sources */,
 				114D2A891E63F3A900EDBCAE /* TestKeychainViewController.m in Sources */,
 				11098AC11E67AECC00AC2497 /* ZTRuntimeUtil.m in Sources */,
+				11C90B3A1EA4915E001D9BC0 /* PhotosUtil.m in Sources */,
 				1162C1461E72AB3700D25FDD /* TestStillMethod.m in Sources */,
 				B6EC74D71DBF1DD200B90B88 /* NSObject+MiddleVar.m in Sources */,
 				B6EC74B11DBF126300B90B88 /* AppDelegate.m in Sources */,
 				11F649AA1E7A3C23000E6FEE /* ScrollInteractViewController.m in Sources */,
 				1162C13E1E71469000D25FDD /* UploadImageViewController.m in Sources */,
 				11B7A9411E5BE18000C8A2E0 /* CategoryTestViewController.m in Sources */,
+				11C90B2B1EA490D7001D9BC0 /* ZTDownloader.m in Sources */,
+				118A9E461EA71BF400026C27 /* SubClass.m in Sources */,
 				11B7A9261E55481A00C8A2E0 /* LottieTestViewController.m in Sources */,
 				B6E780DE1E16444D00C37950 /* TestRunLoopAndWhileViewController.m in Sources */,
 				B6E780D41E1609B300C37950 /* TestViewController.m in Sources */,
 				11D68CF61E700DF6006FCDC3 /* AppiumViewController.m in Sources */,
 				11B7A9221E543FF500C8A2E0 /* Assist.m in Sources */,
 				B6EC74AE1DBF126300B90B88 /* main.m in Sources */,
+				11C90B391EA4915E001D9BC0 /* PhotoLibViewController.m in Sources */,
 				114E34451E5ED84C0035B8DA /* MultiThreadDownloadManager.m in Sources */,
 				11B7A9181E53F70C00C8A2E0 /* WKWebViewTestViewController.m in Sources */,
 				B6EA7DF11DD0157200EBDF72 /* LifeCycleTableViewController.m in Sources */,
@@ -1151,6 +1282,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1173,7 +1305,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1198,6 +1330,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1214,7 +1347,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -1237,7 +1370,7 @@
 					/System/Library/Frameworks/Python.framework/Headers,
 				);
 				INFOPLIST_FILE = TestAboutALL/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Zac.TestAboutALL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1261,7 +1394,7 @@
 					/System/Library/Frameworks/Python.framework/Headers,
 				);
 				INFOPLIST_FILE = TestAboutALL/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Zac.TestAboutALL;
 				PRODUCT_NAME = "$(TARGET_NAME)";

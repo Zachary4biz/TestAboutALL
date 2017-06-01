@@ -43,12 +43,12 @@ PHAssetCollection *const ZTAllAlbum;
 //准备好所有的相册
 - (void)prepareAllAlbum
 {
-    self.userAlbums = [self prepareUserAlbums];
-    self.smartAlbums = [self prepareSmartAlbums];
+    self.userAlbums = [[self class] prepareUserAlbums];
+    self.smartAlbums = [[self class] prepareSmartAlbums];
 }
 
 //获取用户自定义相册
-- (PHFetchResult *)prepareUserAlbums
++ (PHFetchResult *)prepareUserAlbums
 {
     PHFetchResult *userAlbums = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeAlbum
                                                                          subtype:PHAssetCollectionSubtypeSmartAlbumUserLibrary
@@ -56,13 +56,14 @@ PHAssetCollection *const ZTAllAlbum;
     NSLog(@">>>>>用户自定义相册一共有 %ld 个",userAlbums.count);
     [userAlbums enumerateObjectsUsingBlock:^(PHAssetCollection * _Nonnull collection, NSUInteger idx, BOOL * _Nonnull stop) {
         NSLog(@"相册名字:%@", collection.localizedTitle);
+        
     }];
     
     return userAlbums;
 }
 
 //获取智能相册
-- (PHFetchResult *)prepareSmartAlbums
++ (PHFetchResult *)prepareSmartAlbums
 {
     PHFetchResult *smartAlbums = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeSmartAlbum
                                                                           subtype:PHAssetCollectionSubtypeAlbumRegular
@@ -72,6 +73,7 @@ PHAssetCollection *const ZTAllAlbum;
     [smartAlbums enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx,BOOL *stop) {
         PHAssetCollection *collection = (PHAssetCollection*)obj;
         NSLog(@"相册名字:%@", collection.localizedTitle);
+        
     }];
     
     return smartAlbums;
@@ -108,13 +110,13 @@ PHAssetCollection *const ZTAllAlbum;
 
 #pragma mark - 根据PHAsset对象，解析图片
 //默认按照图像原尺寸获得image
-- (void)dealwithAsset:(PHAsset *)asset complition:(void (^)(UIImage *__nullable result, NSDictionary *__nullable info))complitionBlock
++ (void)dealwithAsset:(PHAsset *)asset complition:(void (^)(UIImage *__nullable result, NSDictionary *__nullable info))complitionBlock
 {
-    [self dealWithAsset:asset size:PHImageManagerMaximumSize complition:complitionBlock];
+    [[self class] dealWithAsset:asset size:PHImageManagerMaximumSize complition:complitionBlock];
     
 }
 //自定义获取图像的尺寸
-- (void)dealWithAsset:(PHAsset *)asset size:(CGSize)size complition:(void (^)(UIImage *__nullable result, NSDictionary *__nullable info))complitionBlock
++ (void)dealWithAsset:(PHAsset *)asset size:(CGSize)size complition:(void (^)(UIImage *__nullable result, NSDictionary *__nullable info))complitionBlock
 {
     /**
      * option.resizeMode选项如下：

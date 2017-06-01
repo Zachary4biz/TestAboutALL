@@ -1,8 +1,8 @@
-*.xcuserstate  
-TestAboutAll.xcworkspace  
 xcuserdata  
-UserInterfaceState.xcuserstate  
-TestAboutAll.xcworkspace/  
+*.xcuserstate
+*.xcuserstate
+*.xcuserdata 
+UserInterfaceState.xcuserstate    
 xcuserdata/  
 UserInterface.xcuserstate
 UserInterfaceState.xcuserstate  
